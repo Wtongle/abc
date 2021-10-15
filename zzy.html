@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			td{
+				border: 1px solid;
+			}
+		</style>
+	</head>
+	<body>
+   <!-- 第一题 -->
+		<script>
+			document.write('第一题');
+			document.write('<table>');
+			for(let h=1;h<10;h++){
+				document.write('<tr>');
+				for(let s=1;s<=h;s++){
+					document.write('<td>'+s+'x'+h+'='+s*h+'</td>');
+				}
+				for(let p=h+1;p<10;p++){
+					document.write('<td></td>');
+				}
+					document.write('</tr>');
+				// document.write('<br/>');
+			}
+			document.write('</table>');
+			document.querySelector('table').style.borderCollapse='collapse';
+		</script>
+		<!-- 第二题 -->
+		<script>
+			document.write('第二题');
+			document.write('<table cellspacing=0>');
+			for( let i=0;i<=13;i++){
+				document.write('<tr>');
+				for( let q=0;q<=13;q++){
+					document.write('<td>');
+					if(i===0&&q===0){
+						document.write('x');
+					}else if(i===0){
+						document.write(`${q-1}`);
+					}else if(q===0){
+						document.write(`${i-1}`);
+					}else{
+						document.write(`${(q-1)*(i-1)}`);
+					}
+					document.write('</td>')
+				}
+				document.write('</tr>');
+			}
+			document.write('</table>');
+		</script>
+		<!-- 第三题 -->
+		<script>
+			document.write('第三题'+'<br>');
+			let ju = 0;
+		for( let w=0;w<100;w++){
+			ju++;
+			
+			if(w<10){
+				document.write(' '+ '0'+w);
+			}else {
+				document.write(w+' ');
+			}
+			if(ju%10===0){
+				document.write('<br>');
+			}
+			
+			
+		}
+				
+		</script>
+		<!-- 第四题 -->
+		<script>
+			document.write('第四题'+'<br>');
+			let anum=0;
+			let bnum=0;
+			let cnum=0;
+			for(let i=1;i<=100;i++){
+				if(i%3===0&&i%5!==0){
+					document.write(i+'A'+'  ');
+					anum++;
+				}else if(i%5===0&&i%3!==0){
+					document.write(i+'B'+'  ');
+					bnum++;
+				}else if(i%3===0&&i%5===0){
+					document.write(i+'C'+'  ');
+					cnum++;
+				}else{
+					document.write(i+'  ');
+				}
+			}
+			let a2=`A的个数为${anum},B的个数为${bnum},	C的个数为${cnum}`
+			document.write(a2);
+			document.write('<br>');
+		</script>
+		<!-- 第五题 -->
+		<script>
+			document.write('第五题'+'<br>');
+			let a1=10;
+			let b1=15;
+			document.write(a1<b1?'a1小于b1':(a1>b1?'a1大于b1':'a1等于c1'))    
+			document.write('<br>');
+		</script>
+		<!-- 第六题 -->
+		<script>
+			document.write('第六题'+'<br>');
+			let a=1;
+			let b=2;
+			let c=a*4+b**3;
+			document.write(c);
+		</script>
+	</body>
+</html>
